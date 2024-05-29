@@ -1,19 +1,20 @@
 import os
+
 import numpy as np
 import scipy
-import torch
 import torchaudio
+from dotenv import load_dotenv
 from loguru import logger
 from pyannote.audio import Pipeline
-from pyannote.audio.pipelines.utils.hook import ProgressHook
 from tqdm import tqdm
-import pandas as pd
+
+load_dotenv()
 
 
 if __name__ == "__main__":
     pipeline = Pipeline.from_pretrained(
         "pyannote/speaker-diarization-3.1",
-        use_auth_token="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")
+        use_auth_token=os.getenv("HF_AUTH_TOKEN"),
 
     # pipeline.to(torch.device("cuda"))
 
