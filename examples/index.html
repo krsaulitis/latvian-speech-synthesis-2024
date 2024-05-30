@@ -12,16 +12,303 @@
 <body>
 <main style="text-align: center;">
     <h1>Latvian Speech Synthesis</h1>
-    <p></p>
+    <p style="max-width: 50rem; margin: 3rem auto;">This page contains some of the most iconic samples from speech enhancement, voice conversion and synthesised speech. Code for sample generation, data processing and model training can be found at <a href="https://github.com/krsaulitis/latvian-speech-synthesis-2024">github.com/krsaulitis/latvian-speech-synthesis-2024</a></p>
     <div style="margin: 3rem 0;">
         <h2>Speech enhancement system comparison</h2>
+
+        <table style="margin: 0 auto;">
+            <tr>
+                <th style="text-align: left;">Model</th>
+                <th>"Man likās, tas ir viss."</th>
+                <th>"Mums ir lemts viens liktenis."</th>
+                <th>"Berta palīdzēja vīram jūsmot."</th>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">Raw</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/raw/common_voice_lv_37744510.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/raw/common_voice_lv_37816989.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/raw/pavels_rozitis_ceplis_ch_4_198.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">Demucs</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/demucs/common_voice_lv_37744510.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/demucs/common_voice_lv_37816989.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/demucs/pavels_rozitis_ceplis_ch_4_198.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">MP-SENet</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/mp-senet/common_voice_lv_37744510.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/mp-senet/common_voice_lv_37816989.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/mp-senet/pavels_rozitis_ceplis_ch_4_198.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">Resemble</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/resemble/common_voice_lv_37744510.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/resemble/common_voice_lv_37816989.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/resemble/pavels_rozitis_ceplis_ch_4_198.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">Adobe</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/adobe/common_voice_lv_37744510.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/adobe/common_voice_lv_37816989.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/enhancement/adobe/pavels_rozitis_ceplis_ch_4_198.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
     </div>
     <div style="margin: 3rem 0;">
         <h2>Voice conversion system comparison</h2>
+        <p>1st sample - "Kam vajadzīgs liels pūlis, lai izliktos, ka labi pavada laiku?"</p>
+        <p>2nd sample - "Mums ir daudzas sociālās identitātes, kas mūs raksturo, un tas ir jāakceptē."</p>
+        <table style="margin: 0 auto;">
+            <tr>
+                <th style="text-align: left;">Model</th>
+                <th>Male</th>
+                <th>Female</th>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">Target</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/target/male/common_voice_lv_37743648.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/target/female/common_voice_lv_37668579.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align: left;">Raw</th>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/raw/common_voice_lv_20419057.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/raw/common_voice_lv_38615940.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align: left;">FreeVC</th>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/free-vc/male/common_voice_lv_20419057.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/free-vc/female/common_voice_lv_20419057.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/free-vc/male/common_voice_lv_38615940.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/free-vc/female/common_voice_lv_38615940.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align: left;">so-vits-svc</th>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/so-vits/male/common_voice_lv_20419057.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/so-vits/female/common_voice_lv_20419057.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/so-vits/male/common_voice_lv_38615940.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/so-vits/female/common_voice_lv_38615940.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align: left;">RVC</th>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/rvc/male/common_voice_lv_20419057.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/rvc/female/common_voice_lv_20419057.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/rvc/male/common_voice_lv_38615940.wav" type="audio/wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="audio/conversion/rvc/female/common_voice_lv_38615940.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
     </div>
     <div style="margin: 3rem 0;">
         <h2>Existing method comparison</h2>
+        <table style="margin: 0 auto;">
+            <tr>
+                <th style="text-align: left;">Model</th>
+                <th>"Ziemeļu piekrastē daudz nelielu saliņu un klinšu."</th>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">Raw</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/synthesis/raw/common_voice_lv_39538677.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">eSpeak</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/synthesis/espeak/common_voice_lv_39538677.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">Hugo.lv</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/synthesis/hugo/common_voice_lv_39538677.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">Coqui</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/synthesis/coqui/common_voice_lv_39538677.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">AiLab</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/synthesis/ailab/common_voice_lv_39538677.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">Model Nr. 3, voice nr. 14</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/synthesis/model/model-3/14/common_voice_lv_39538677.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">Model Nr. 6, voice nr. 14</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/synthesis/model/model-6/14/common_voice_lv_39538677.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-right: 1rem;">Model Nr. 8</td>
+                <td>
+                    <audio controls>
+                        <source src="audio/synthesis/model/model-8/common_voice_lv_39538677.wav" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
     </div>
 </main>
+<style>
+    * {
+        font-family: 'Roboto Slab', sans-serif;
+    }
+</style>
 </body>
 </html>
